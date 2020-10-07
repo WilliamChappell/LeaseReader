@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">Dashboard</div>
+                <h3 class="text-center">Edit Heading</h3>
 
                 <div class="card-body">
                     @if (session('status'))
@@ -34,14 +34,12 @@
                         </div>
                         <div class="form-group">
                             <div class="col-md-8 col-md-offset-4">
-                                <button type="submit" class="btn btn-primary">
+                                <button type="submit" class="btn btn-success">
                                     Save
                                 </button>
-                                <button type="cancel" class="btn btn-primary">
+                                <button type="cancel" class="btn btn-danger">
                                     Cancel
                                 </button>
-
-
                             </div>
                         </div>
 

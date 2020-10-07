@@ -15,7 +15,7 @@
                     <tr>
                         <th>Heading Name</th>
                         <th>Description</th>
-                        <th>Actions <a href='heading/create'><button class="btn btn-success"><div class="glyphicon glyphicon-plus"></div></button></a></th>
+                        <th>Actions <a href='heading/create'><button class="btn btn-success">Create</button></a></th>
                     </tr>
                 </thead>
                 @foreach($headings as $heading)
@@ -23,9 +23,9 @@
                     <td>{{ $heading->heading_name }}</td>
                     <td>{{ $heading->description }}</td>
                     <td>
-                        <a href='heading/{{ $heading->id }}'><button class="btn btn-default"><div class="glyphicon glyphicon-search"></div></button></a>
-                        <a href='heading/{{ $heading->id}}/edit'><button class="btn btn-default"><div class="glyphicon glyphicon-pencil"></div></button></a>
-                        <a href='heading/{{ $heading->id}}/delete'><button class="btn btn-danger"><div class="glyphicon glyphicon-trash"></div></button></a>
+                        <a href='heading/{{ $heading->id }}'><button class="btn btn-default">View</button></a>
+                        <a href='heading/{{ $heading->id}}/edit'><button class="btn btn-default">Edit</div></button></a>
+                        <a href='heading/{{ $heading->id}}/delete'><button class="btn btn-danger">Delete</div></button></a>
                     </td>
                 </tr>
                 @endforeach

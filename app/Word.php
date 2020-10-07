@@ -2,18 +2,22 @@
 
 namespace App;
 
-use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
-class Word extends Model
+class Word extends BaseModel
 {
+	use SoftDeletes;
     protected $fillable = [
         'word',
-        'heading_id'
+        'heading_id',
+        'created_by',
+        'deleted_by',
+        'deleted_at'
     ];
 
     public function HeadingRelation()
     {
-    	return false;
+    	return $this->hasOne('App\Heading', 'id', 'heading_id');
     }
 
 

@@ -11,18 +11,18 @@
             @endif
             @if(isset($heading) && !empty($heading->WordsRelation))
             <table class="col-md-12 table table-striped table-hover">
-                <tr>
-                    <thead>
-                        <th>Word Name</th>
-                        <th>Actions <a href='word/create'><button class="btn btn-success"><div class="glyphicon glyphicon-plus"></div></button></a></th>
-                    </thead>
-                </tr>
+                <thead>
+                    <tr>
+                        <th>Phrase Name</th>
+                        <th>Actions <a href='/word/create/{{ $heading->id }}'><button class="btn btn-success">Create</button></a></th>
+                    </tr>
+                </thead>
                 @foreach($heading->WordsRelation as $word)
                 <tr>
                     <td>{{ $word->word }}</td>
                     <td>
-                        <a href='/word/{{ $word->id}}/edit'><button class="btn btn-default"><div class="glyphicon glyphicon-pencil"></div></button></a>
-                        <a href='/word/{{ $word->id}}/delete'><button class="btn btn-danger"><div class="glyphicon glyphicon-trash"></div></button></a>
+                        <a href='/word/{{ $word->id}}/edit'><button class="btn btn-default">Edit</button></a>
+                        <a href='/word/{{ $word->id}}/delete'><button class="btn btn-danger">Delete</button></a>
                     </td>
                 </tr>
 

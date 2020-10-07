@@ -19,6 +19,8 @@ class CreateHeadingsTable extends Migration
             $table->string('description');
             $table->integer('created_by');
             $table->integer('updated_by')->nullable();
+            $table->integer('deleted_by')->nullable();
+            $table->dateTime('deleted_at')->nullable();
             $table->timestamps();
         });
     }

@@ -34,4 +34,18 @@ class WordController extends Controller
 
         return redirect('/heading/' . $headingID);
     }
+
+    public function create($headingID)
+    {
+        return view('word.create', compact('headingID'));
+    }
+
+    public function store(Request $request, $headingID)
+    {
+        $request->request->add(['heading_id' => $headingID]);
+
+        $model = Word::create($request->all());
+
+        return redirect('/heading/' . $headingID);
+    }
 }

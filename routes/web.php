@@ -18,11 +18,18 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/heading/create', 'HeadingController@create');
+Route::post('/heading', 'HeadingController@store');
 Route::get('/heading/{headingID}', 'HeadingController@show');
 Route::get('/heading/{headingID}/edit', 'HeadingController@edit');
 Route::post('/heading/{headingID}', 'HeadingController@update');
 Route::get('/heading/{headingID}/delete', 'HeadingController@destroy');
 
+Route::get('/word/create/{headingID}', 'WordController@create');
+Route::post('/word/create/{headingID}', 'WordController@store');
 Route::get('/word/{wordID}/edit', 'WordController@edit');
 Route::post('/word/{wordID}/', 'WordController@update');
 Route::get('/word/{wordID}/delete', 'WordController@destroy');
+
+
+

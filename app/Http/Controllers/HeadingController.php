@@ -42,4 +42,17 @@ class HeadingController extends Controller
 
         return redirect('/home');
     }
+
+    public function create()
+    {
+        return view('heading.create');
+    }
+
+    public function store(Request $request)
+    {
+        $model = Heading::create($request->all());
+
+        return redirect('/home');
+    }
 }
+
