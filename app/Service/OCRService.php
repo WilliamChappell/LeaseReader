@@ -12,6 +12,7 @@ class OCRService
 		$input_path = config('uploads.upload_processing');
 		$output_path = config('uploads.upload_output');
 
+		// Needed otherwise the library will sometimes though errors about already being defined..
 		sleep(5);
 
 		\PDFNet::Initialize();
