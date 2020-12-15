@@ -17,8 +17,6 @@ class CheckInputFolderJob implements ShouldQueue
 
     public function handle()
     {
-        Log::error("Starting Check Input Folder Job");
-
         $it = new \RecursiveDirectoryIterator(config('uploads.upload_input'));
 
         foreach(new \RecursiveIteratorIterator($it) as $file) {
@@ -32,7 +30,7 @@ class CheckInputFolderJob implements ShouldQueue
                 rename($currFilePath, $processingFilePath);
 
                 // Starts a job to OCR the document
-                OCRJob::dispatch($fileName);
+                OCRJob::dispatch($fileName)->onQueue('ocrQueue');
             }
         }
 

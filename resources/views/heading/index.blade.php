@@ -33,7 +33,6 @@
             @else
                 No headings found..
             @endif
-
         </div>
     </div>
 </div>

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Heading;
+
 class HeadingController extends Controller
 {
     public function show($headingID)

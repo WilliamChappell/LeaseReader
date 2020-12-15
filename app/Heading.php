@@ -14,7 +14,6 @@ class Heading extends BaseModel
         'created_by',
         'updated_by',
         'deleted_by',
-        'deleted_at'
     ];
 
     public function WordsRelation()
@@ -22,5 +21,18 @@ class Heading extends BaseModel
         return $this->hasMany('App\Word','heading_id','id');
     }
 
+    public function CreatedByRelation()
+    {
+        return $this->hasOne('App\User','id','created_by');
+    }
 
+    public function UpdatedByRelation()
+    {
+        return $this->hasOne('App\User','id','updated_by');
+    }
+
+    public function DeletedByRelation()
+    {
+        return $this->hasOne('App\User','id','deleted_by');
+    }
 }
