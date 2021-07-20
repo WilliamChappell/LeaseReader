@@ -16,9 +16,6 @@ class BookmarkService
 
         $headings = Heading::all();
 
-        // Needed otherwise the library will sometimes though errors about already being defined..
-        sleep(5);
-
         \PDFNet::Initialize();
         \PDFNet::GetSystemFontList();
 

@@ -20,5 +20,19 @@ class Word extends BaseModel
     	return $this->hasOne('App\Heading', 'id', 'heading_id');
     }
 
+    public function CreatedByRelation()
+    {
+        return $this->hasOne('App\User','id','created_by');
+    }
+
+    public function UpdatedByRelation()
+    {
+        return $this->hasOne('App\User','id','updated_by');
+    }
+
+    public function DeletedByRelation()
+    {
+        return $this->hasOne('App\User','id','deleted_by');
+    }
 
 }

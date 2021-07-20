@@ -4,11 +4,6 @@ use Illuminate\Database\Seeder;
 use App\Heading;
 class HeadingSeeder extends Seeder
 {
-    /**
-     * Run the database seeds.
-     *
-     * @return void
-     */
     public function run()
     {
         $list = [
@@ -25,12 +20,8 @@ class HeadingSeeder extends Seeder
             "Marketing" => "Any previsions for marketing or promotions",
             "Service Charge Start Date" => "The date the service charge is applicable from",
             "Sinking Fund" => "If the lease specifies a sinking or reserve fund or for any future expenditure",
-            "Service charge costs" => "Defines if the costs should be economical, effecient, proper etc",
-            "Receipts and vouchers" => "The period in which the tenant has to inspect all receipts that apply to the service charge",
             "Sweeper" => "Any 'catch all' clause",
-            "Tenant’s or merchant’s association" => "If the marketing is done though a tenants or merchants associantion",
-            "Weighted floor area table or formulae" => "The part of the lease that defines a WFA table or how to calculate it",
-            "Third Party" => "Any clauses for third party arbitration etc"
+            "Weighted floor area table or formulae" => "The part of the lease that defines a WFA table or how to calculate it"
         ];
 
         foreach($list as $key => $desc){
@@ -43,3 +34,5 @@ class HeadingSeeder extends Seeder
         }
     }
 }
+
+

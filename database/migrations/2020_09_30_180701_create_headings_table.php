@@ -6,11 +6,6 @@ use Illuminate\Support\Facades\Schema;
 
 class CreateHeadingsTable extends Migration
 {
-    /**
-     * Run the migrations.
-     *
-     * @return void
-     */
     public function up()
     {
         Schema::create('headings', function (Blueprint $table) {
@@ -25,13 +20,11 @@ class CreateHeadingsTable extends Migration
         });
     }
 
-    /**
-     * Reverse the migrations.
-     *
-     * @return void
-     */
     public function down()
     {
         Schema::dropIfExists('headings');
     }
 }
+
+
+
